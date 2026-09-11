@@ -1,4 +1,4 @@
-# Pointer
+# Arrays Introduction
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -46,31 +46,28 @@ Print the $N$ integers of the array in the reverse order, space-separated on a s
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-11T15:49:33.034Z  
+**Submitted:** 2026-09-11T16:01:41.502Z  
 
 ```cpp
-#include <stdio.h>
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
 
-void update(int *a,int *b) {
-    // Complete this function   
-    int c,d;
-    c=*a+*b;
-    
-    d=*a-*b;
-    *a=c;
-    if (d<0) d=-d;
-
-    *b=d;
-}
 
 int main() {
-    int a, b;
-    int *pa = &a, *pb = &b;
-    
-    scanf("%d %d", &a, &b);
-    update(pa, pb);
-    printf("%d\n%d", a, b);
-
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+     int n;
+     cin>>n;
+     int arr[n];
+     for (int i=0;i<n;i++){
+        cin>>arr[i];     
+     }
+     for (int j=n-1;j>=0;j--){
+        cout<<arr[j]<<" ";
+     }
     return 0;
 }
 
